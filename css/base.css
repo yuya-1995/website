@@ -26,6 +26,7 @@ a{text-decoration: none;}
 body {
 	
 	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	margin: 0;
 }
 
 * {
@@ -38,12 +39,18 @@ body {
 
 .body_color{
 	background-color: #ffefd5;
+	margin: 0;
+}
+
+.wrap{
+	overflow: hidden;
 }
 
 @media screen and (max-width:390px) {
 	body{
-		min-width: 390px;
+		max-width: 390px;
 		width: 390px;
+		height: 100%;
 		margin: 0;
 	}
 }
@@ -68,8 +75,9 @@ body {
 }
 
 @media screen and (max-width:390px) {
-	.nav{
-		overflow: hidden;
+	
+	.header{
+		width: 100%;
 	}
 
 	.nav-btn{
@@ -92,31 +100,6 @@ body {
 	width: 100%;
 	height:400px;
 	object-fit: cover;
-}
-
-@media screen and (max-width:390px) {
-	.swiper-img{
-		width: 100%;
-		height:400px;
-		padding: 10px 20px;
-		background-color: #ffefd5;
-		object-fit: cover;
-	}
-	
-	.swiper{
-		width: 390px;
-		overflow: hidden;
-	}
-
-	.swiper-wrapper{
-		width: 600px;
-	}
-
-	.swiper-slide{
-		width: 0;
-		overflow: hidden;
-	}
-
 }
 
 .swiper-container {
@@ -145,6 +128,32 @@ body {
   -ms-transform: translate(-50%,0);
   -o-transform: translate(-50%,0);
   transform: translate(-50%,0);
+}
+
+.swiper-slide-img {
+	width: 100%;
+	}
+
+@media screen and (max-width:390px) {
+	.swiper-img{
+		width: 100%;
+		height:400px;
+		padding: 10px 20px;
+		background-color: #ffefd5;
+		object-fit: cover;
+	}
+	
+	.swiper{
+		width: 390px;
+	}
+
+	.swiper-wrapper{
+		width: 600px;
+	}
+
+	/* .swiper-slide-img {
+		min-width: 322px;
+		} */
 }
 
 
