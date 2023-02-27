@@ -26,6 +26,7 @@ a{text-decoration: none;}
 body {
 	
 	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	margin: 0;
 }
 
 * {
@@ -38,12 +39,19 @@ body {
 
 .body_color{
 	background-color: #ffefd5;
+	margin: 0;
+	
+}
+
+.wrap{
+	overflow:visible;
 }
 
 @media screen and (max-width:390px) {
 	body{
-		min-width: 390px;
+		max-width: 390px;
 		width: 390px;
+		height: 100%;
 		margin: 0;
 	}
 }
@@ -68,8 +76,9 @@ body {
 }
 
 @media screen and (max-width:390px) {
-	.nav{
-		overflow: hidden;
+	
+	.header{
+		width: 100%;
 	}
 
 	.nav-btn{
@@ -92,31 +101,6 @@ body {
 	width: 100%;
 	height:400px;
 	object-fit: cover;
-}
-
-@media screen and (max-width:390px) {
-	.swiper-img{
-		width: 100%;
-		height:400px;
-		padding: 10px 20px;
-		background-color: #ffefd5;
-		object-fit: cover;
-	}
-	
-	.swiper{
-		width: 390px;
-		overflow: hidden;
-	}
-
-	.swiper-wrapper{
-		width: 600px;
-	}
-
-	.swiper-slide{
-		width: 0;
-		overflow: hidden;
-	}
-
 }
 
 .swiper-container {
@@ -147,6 +131,32 @@ body {
   transform: translate(-50%,0);
 }
 
+.swiper-slide-img {
+	width: 100%;
+	}
+
+@media screen and (max-width:390px) {
+	.swiper-img{
+		width: 100%;
+		height:300px;
+		padding: 10px 20px;
+		background-color: #ffefd5;
+		object-fit: cover;
+	}
+	
+	.swiper{
+		width: 390px;
+	}
+
+	.swiper-wrapper{
+		width: 600px;
+	}
+
+	/* .swiper-slide-img {
+		min-width: 322px;
+		} */
+}
+
 
 /* 新型コロナウイルス */
 
@@ -173,18 +183,29 @@ body {
   }
 
   @media screen and (max-width:390px) {
+	.COVID{
+		margin: 10px 20px;
+		font-size: 28px;
+		text-align:start;
+	}
+
 	.accordion {
-		width: 80%;
+		width: 82%;
 		margin: 0 auto;
 	  }
 	.menu2 {
 		background-color: #ffc7af;
-		margin-top: 20px;
+		margin: 3px 0;
 		text-align: start;
 		cursor: pointer;
 		user-select: none;
 		padding: 10px;
-		font-size: 30px;
+		font-size: 18px;
+		font-weight: 400;
+	  }
+
+	  .contents{
+		font-size: 11px;
 	  }
 }
  
@@ -265,8 +286,6 @@ body {
 	height: 200px;
 	border-radius: 50%;
   }
- 
-  
 
   @media screen and (max-width:390px) {
 	.element {
@@ -277,21 +296,23 @@ body {
 		transition: transform 1s, opacity 1s, visibility 1s;
 		/* （装飾用スタイル） */
 		width: 80%;
-		height: 260px;
+		height: 150px;
 		background-color: rgba(0, 0, 0, 0);
-		margin: 10px auto 340px;
+		margin: 0 auto 232px;
 	  }
-	  
+
+	  .wrapper{
+	  height: 100%;
+	  }
 	  .element-item{
+		padding: 1px;
 		display: block;
 		align-items: center;
-		justify-content: flex-start;
 	  }
 
 	  .element-img img{
-		margin: 0 auto;
 		width: 100%;
-		height: 400px;
+		height: 200px;
 	  }
 
 	  .element-comment p{
@@ -304,25 +325,27 @@ body {
 	  }
 
 	  .element.address{
-		width: 70%;
-		height: 450px;
+		width: 80%;
+		height: 250px;
 	  }
 	  .element-item.address{
 		width: 100%;
-		height: 750px;
+		height: auto;
 	  }
 	  .element-comment.address-comment h2{
-		margin-bottom: 30px;
+		margin-bottom: 10px;
 	  }
 	  .element-comment.address-comment p{
-		margin-bottom: 30px;
+		font-size: 1px;
+		margin-bottom: 10px;
 	  }
 
 	  .element-img.address-img{
-		height: 380px;
+		height: 250px;
 		padding-bottom: 10px;
+		align-items: center;
 	  }
-
+	  
 	  .element.shop{
 		display: none;
 		margin: 0 auto ;
@@ -345,7 +368,7 @@ body {
   .footer{
 	background-color: darkgray;
 	width: 100%;
-	height: 150px;
+	height: 100px;
 	color: black;
 	display: flex;
 	justify-content: center;
